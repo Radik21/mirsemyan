@@ -1,0 +1,327 @@
+:root {
+    --primary-green: rgb(174, 198, 112);
+    --text-black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 2vw;
+    height: 10.5vh;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1vw; 
+}
+
+.logo-image {
+    width: 5vw;
+    height: auto;
+}
+
+.fonglav {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    left: 0%;
+    top: 10.5%;
+    object-fit: cover;
+    z-index: 1;
+    max-width: 100%; /* Адаптивное изображение фона */
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: calc(40px + 16 * (100vw / 1280));
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 2vw;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--text-black);
+    font-weight: 500;
+    font-size: calc(16px + 16 * (100vw / 1280));
+}
+
+.hero {
+    height: 81vh;
+    background-image: url('/placeholder.svg?height=769&width=1680');
+    background-size: cover;
+    background-position: center;
+    padding: 5vh 6vw;
+}
+
+.hero-text {
+    max-width: 80vw;
+}
+
+.hero-text h2 {
+    font-family: 'Playfair Display', serif;
+    margin-top: 10vh;
+    font-weight: 700;
+    font-size: calc(70px + 16 * (100vw / 1280));
+    line-height: 11vh;
+    margin-bottom: 4vh;
+    position: relative;
+    z-index: 2;
+}
+
+header nav ul li:not(.active):not(.btn) a {
+    color: black; /* Укажите начальный цвет текста */
+    transition: color 300ms ease; /* Плавный переход цвета за 0.3 секунды */
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    color: #AEC670 ; /* Замените 'red' на любой другой цвет по вашему выбору */
+}
+
+.hero-text p {
+    position: relative;
+    margin-top: 1vh;
+    font-size: calc(16px + 16 * (100vw / 1280));
+    margin-bottom: 5vh;
+    z-index: 2;
+}
+
+.catalog-button {
+    position: relative;
+    width: 18vw;
+    height: 8vh;
+    background: #AEC670;
+    color:black;
+    border-radius: 38px; 
+    padding: 1.5% 3%;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: calc(6px + 16 * (100vw / 1280));    
+    z-index: 2;
+    left: 10vw;
+    margin-top: 10vh;
+    font-weight: 400;
+}
+
+.catalog-button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: calc(60px + 16 * (100vw / 1280));
+    line-height: 30vh;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.flower-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3%;
+    padding: 0 7vw;   
+    margin-bottom: 8vh;
+}
+
+.flower-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+.flower-image {
+    width: 50vw;
+    height: 50vh;
+    object-fit: cover; 
+}
+
+.flower-card h3 {
+    font-weight: 500;
+    font-size: calc(18px + 16 * (100vw / 1280));
+    margin-bottom: 4vh;
+}
+
+.footer {
+    background-color: #AEC670;
+    padding: 4vh 10vw;
+    max-width: 100%;
+    height: 30vh;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.footer-section h4 {
+    font-weight: 600;
+    font-size: calc(9px + 16 * (100vw / 1280));
+    line-height: 13vh;
+}
+
+.footer-section h5 {
+    font-weight: 500;
+    font-size: calc(9px + 16 * (100vw / 1280));
+    line-height: 13vh;
+}
+
+.footer-section p {
+    font-weight: 500;
+    font-size: calc(9px + 16 * (100vw / 1280));
+    line-height: 13vh;
+}
+
+.footer-section h6 {
+    font-weight: 600;
+    font-size: calc(10px + 16 * (100vw / 1280));
+    line-height: 13vh;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16%;
+}
+
+.social-icons img {
+    width: 4vw;
+    height: auto;
+}
+
+.flower-card {
+    position: relative; /* Позволяет использовать абсолютное позиционирование для цены */
+}
+
+.flower-image {
+    width: 100%; /* Заставляет изображение занимать всю ширину карточки */
+    height: auto;
+    transition: transform 0.3s ease; /* Плавный переход при наведении */
+}
+
+.flower-card:hover .flower-image {
+    transform: translateY(-1vh); /* Поднимает изображение вверх на 10 пикселей при наведении */
+}
+
+.flower-price {
+    position: absolute; /* Позволяет позиционировать цену относительно родителя */
+    bottom: 1vh; /* Расстояние от нижней части карточки */
+    left: 50%; /* Центрирует по горизонтали */
+    transform: translateX(-50%); /* Центрирует по горизонтали */
+    background-color: rgba(255, 255, 255,1); /* Полупрозрачный фон для читаемости текста */
+    opacity: 0; /* Скрывает цену по умолчанию */
+    transition: opacity 0.3s ease; /* Плавный переход для появления цены */
+    color: black;
+}
+
+.flower-card:hover .flower-price {
+    opacity: 1; /* Показывает цену при наведении на карточку */
+}
+
+
+.cart-icon {
+    position: absolute; /* Позволяет разместить иконку в правом верхнем углу */
+    top: 2.5vh; /* Расстояние от верхнего края */
+    right: 0.5vw; /* Расстояние от правого края */
+}
+
+.cart-icon a {
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.cart-icon a img {
+    transition: filter 0.1s; /* Плавный переход для фильтра */
+}
+
+.cart-icon a:hover img {
+    filter: brightness(0) saturate(100%) invert(1%); /* Пример изменения цвета */
+}
+
+.flower-card {
+    position: relative; /* Для абсолютного позиционирования элементов внутри */
+}
+
+.cart-icon {
+    display: inline-block; /* Для правильного отображения */
+    margin-top: 100%; /* Отступ сверху */
+}
+
+.cart-image {
+    width: 2.7vw; /* Ширина изображения корзины */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    transition: filter 0.3s; /* Плавный переход для фильтра */
+}
+
+.cart-icon:hover .cart-image {
+    filter: brightness(0) saturate(100%) invert(30%); /* Изменение цвета при наведении */
+}
+
+ /* Стили для модального окна */
+ .modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 2vw;
+    border: 0.1vw solid #888;
+    width: 80%;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: calc(10px + 16 * (100vw / 1280));
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Уведомление */
+.notification {
+    position: fixed;
+    top: 2vh;
+    right: 2vh;
+    background-color: #AEC670; /* Зеленый цвет */
+    color: white;
+    padding: 1vh;
+    border-radius: 5px;
+    display: none; /* Скрыто по умолчанию */
+    z-index: 3;
+}

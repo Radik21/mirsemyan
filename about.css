@@ -1,0 +1,169 @@
+:root {
+    --text-black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 2vw;
+    height: 10.5vh;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1vw; 
+}
+
+.logo-image {
+    width: 5vw;
+    height: auto;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: calc(40px + 16 * (100vw / 1280));
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 2vw;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--text-black);
+    font-weight: 500;
+    font-size: calc(16px + 16 * (100vw / 1280));
+}
+
+.welcome {
+    padding: 12vh 8vw;
+    text-align: center;
+}
+
+.welcome h2 {
+    padding: 1vh 12vw;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: calc(70px + 16 * (100vw / 1280));
+    margin-bottom: 3vh;
+}
+
+.welcome-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: calc(14px + 16 * (100vw / 1280));
+    line-height: 7vh;
+    margin: 0 auto;
+}
+
+.features {
+    padding: 6vh 10vw;
+    text-align: center;
+}
+
+.features h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: calc(76px + 16 * (100vw / 1280));
+    margin-bottom: 6vh;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2vw;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.feature-icon { 
+    width: 300px;
+    height: 300px;
+/* иконки не знаю как сделать */
+}
+
+.feature-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: calc(16px + 16 * (100vw / 1280));
+    line-height: 10vh;
+}
+
+.footer {
+    background-color: #AEC670;
+    padding: 4vh 10vw;
+    max-width: 100%;
+    height: 30vh;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.footer-section h4 {
+    font-weight: 600;
+    font-size: calc(9px + 16 * (100vw / 1280));
+    line-height: 13vh;
+}
+
+.footer-section h5 {
+    font-weight: 500;
+    font-size: calc(9px + 16 * (100vw / 1280));
+    line-height: 13vh;
+}
+
+.footer-section p {
+    font-weight: 500;
+    font-size: calc(9px + 16 * (100vw / 1280));
+    line-height: 13vh;
+}
+
+.footer-section h6 {
+    font-weight: 600;
+    font-size: calc(10px + 16 * (100vw / 1280));
+    line-height: 13vh;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16%;
+}
+
+.social-icons img {
+    width: 4vw;
+    height: auto;
+}
+
+header nav ul li:not(.active):not(.btn) a {
+    color: black; /* Укажите начальный цвет текста */
+    transition: color 300ms ease; /* Плавный переход цвета за 0.3 секунды */
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    color: #AEC670 ; /* Замените 'red' на любой другой цвет по вашему выбору */
+}

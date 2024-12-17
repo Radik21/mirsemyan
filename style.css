@@ -58,6 +58,7 @@ body {
 }
 
 .navigation a {
+    font-family: 'arial', serif;
     text-decoration: none;
     color: var(--text-black);
     font-weight: 500;
@@ -152,7 +153,7 @@ header nav ul li:not(.active):not(.btn) a:hover {
 
 .flower-image {
     width: 50vw;
-    height: 50vh;
+    height: 50vh;   
     object-fit: cover; 
 }
 
@@ -164,9 +165,9 @@ header nav ul li:not(.active):not(.btn) a:hover {
 
 .footer {
     background-color: #AEC670;
-    padding: 4vh 10vw;
+    padding: 4vh 7vw;
     max-width: 100%;
-    height: 30vh;
+    height: 25vh;
     width: 100%;
 }
 
@@ -179,30 +180,31 @@ header nav ul li:not(.active):not(.btn) a:hover {
 .footer-section h4 {
     font-weight: 600;
     font-size: calc(9px + 16 * (100vw / 1280));
-    line-height: 13vh;
+    line-height: 9vh;
 }
 
 .footer-section h5 {
     font-weight: 500;
     font-size: calc(9px + 16 * (100vw / 1280));
-    line-height: 13vh;
+    line-height: 9vh;
 }
 
 .footer-section p {
     font-weight: 500;
     font-size: calc(9px + 16 * (100vw / 1280));
-    line-height: 13vh;
+    line-height: 9vh;
 }
 
 .footer-section h6 {
     font-weight: 600;
     font-size: calc(10px + 16 * (100vw / 1280));
-    line-height: 13vh;
+    line-height: 9vh;
 }
 
 .social-icons {
     display: flex;
     gap: 16%;
+    padding: 6vh;
 }
 
 .social-icons img {
@@ -277,42 +279,6 @@ header nav ul li:not(.active):not(.btn) a:hover {
     filter: brightness(0) saturate(100%) invert(30%); /* Изменение цвета при наведении */
 }
 
- /* Стили для модального окна */
- .modal {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 2vw;
-    border: 0.1vw solid #888;
-    width: 80%;
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: calc(10px + 16 * (100vw / 1280));
-    font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 /* Уведомление */
 .notification {
     position: fixed;
@@ -324,4 +290,116 @@ header nav ul li:not(.active):not(.btn) a:hover {
     border-radius: 5px;
     display: none; /* Скрыто по умолчанию */
     z-index: 3;
+}
+
+/* Основные стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Остается на месте при прокрутке */
+    z-index: 1000; /* Поверх других элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+}
+
+/* Стили для содержимого модального окна */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Центрирование по вертикали и горизонтали */
+    padding: 1vw;
+    border-radius: 10px; /* Скругленные углы */
+    width: 20vw; /* Ширина модального окна */
+}
+
+/* Стили для кнопки закрытия */
+.close-button {
+    color: #aaa; /* Цвет текста */
+    float: right; /* Выравнивание вправо */
+    font-size: calc(9px + 16 * (100vw / 1280));
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black; /* Цвет при наведении */
+    text-decoration: none;
+    cursor: pointer; /* Указатель при наведении */
+}
+
+
+
+/* Стили для полей ввода */
+input[type="text"] {
+    width: calc(100% - 20px); /* Полная ширина с учетом отступов */
+    padding: 1vw; /* Отступы внутри поля */
+    margin: 1vh 0; /* Отступы сверху и снизу */
+    border: 0.1vw solid #ccc; /* Граница поля */
+    border-radius: 5px; /* Скругленные углы */
+    box-sizing: border-box; /* Учет отступов и границ в ширине */
+}
+
+/* Стили для кнопки заказа */
+#order-button {
+    background-color: #28a745; /* Зеленый цвет фона */
+    color: white; /* Белый цвет текста */
+    padding: 1vw; /* Отступы внутри кнопки */
+    border: none; /* Без границы */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    width: 100%; /* Полная ширина кнопки */
+}
+
+#order-button:hover {
+    background-color: #218838; /* Темно-зеленый цвет при наведении */
+}
+
+
+
+
+
+
+
+
+
+
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Черный фон с прозрачностью */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% от верхней части экрана */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%; /* Ширина модального окна */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: calc(9px + 16 * (100vw / 1280));
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-flower-image {
+    max-width: 100%; /* Ограничиваем ширину изображения */
+    height: auto; /* Автоматическая высота */
+    margin-top: 1vh; /* Отступ сверху */
 }

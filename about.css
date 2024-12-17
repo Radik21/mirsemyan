@@ -102,7 +102,6 @@ body {
 .feature-icon { 
     width: 300px;
     height: 300px;
-/* иконки не знаю как сделать */
 }
 
 .feature-card h3 {
@@ -162,10 +161,10 @@ body {
 }
 
 header nav ul li:not(.active):not(.btn) a {
-    color: black; /* Укажите начальный цвет текста */
-    transition: color 300ms ease; /* Плавный переход цвета за 0.3 секунды */
+    color: black; 
+    transition: color 300ms ease; 
 }
 
 header nav ul li:not(.active):not(.btn) a:hover {
-    color: #AEC670 ; /* Замените 'red' на любой другой цвет по вашему выбору */
+    color: #AEC670 ; 
 }

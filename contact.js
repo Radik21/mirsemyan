@@ -1,11 +1,11 @@
 document.getElementById('questionForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Отменяем стандартное поведение формы
+    event.preventDefault(); 
 
-    const question = document.getElementById('question').value; // Получаем значение из поля ввода
+    const question = document.getElementById('question').value; 
     if (question) {
-        document.getElementById('successMessage').style.display = 'block'; // Показываем сообщение об успехе
-        this.reset(); // Сбрасываем форму
+        document.getElementById('successMessage').style.display = 'block'; 
+        this.reset(); 
     } else {
-        alert('Пожалуйста, введите ваш вопрос.'); // Сообщение об ошибке
+        alert('Пожалуйста, введите ваш вопрос.');
     }
 });

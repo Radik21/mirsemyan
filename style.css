@@ -42,7 +42,7 @@ body {
     top: 10.5%;
     object-fit: cover;
     z-index: 1;
-    max-width: 100%; /* Адаптивное изображение фона */
+    max-width: 100%; 
 }
 
 .logo-text {
@@ -89,12 +89,12 @@ body {
 }
 
 header nav ul li:not(.active):not(.btn) a {
-    color: black; /* Укажите начальный цвет текста */
-    transition: color 300ms ease; /* Плавный переход цвета за 0.3 секунды */
+    color: black; 
+    transition: color 300ms ease; 
 }
 
 header nav ul li:not(.active):not(.btn) a:hover {
-    color: #AEC670 ; /* Замените 'red' на любой другой цвет по вашему выбору */
+    color: #AEC670 ; 
 }
 
 .hero-text p {
@@ -213,146 +213,144 @@ header nav ul li:not(.active):not(.btn) a:hover {
 }
 
 .flower-card {
-    position: relative; /* Позволяет использовать абсолютное позиционирование для цены */
+    position: relative; 
 }
 
 .flower-image {
-    width: 100%; /* Заставляет изображение занимать всю ширину карточки */
+    width: 100%; 
     height: auto;
-    transition: transform 0.3s ease; /* Плавный переход при наведении */
+    transition: transform 0.3s ease; 
 }
 
 .flower-card:hover .flower-image {
-    transform: translateY(-1vh); /* Поднимает изображение вверх на 10 пикселей при наведении */
+    transform: translateY(-1vh); 
 }
 
 .flower-price {
-    position: absolute; /* Позволяет позиционировать цену относительно родителя */
-    bottom: 1vh; /* Расстояние от нижней части карточки */
-    left: 50%; /* Центрирует по горизонтали */
-    transform: translateX(-50%); /* Центрирует по горизонтали */
-    background-color: rgba(255, 255, 255,1); /* Полупрозрачный фон для читаемости текста */
-    opacity: 0; /* Скрывает цену по умолчанию */
-    transition: opacity 0.3s ease; /* Плавный переход для появления цены */
+    position: absolute; 
+    bottom: 1vh; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: rgba(255, 255, 255,1); 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
     color: black;
 }
 
 .flower-card:hover .flower-price {
-    opacity: 1; /* Показывает цену при наведении на карточку */
+    opacity: 1; 
 }
 
 
 .cart-icon {
-    position: absolute; /* Позволяет разместить иконку в правом верхнем углу */
-    top: 2.5vh; /* Расстояние от верхнего края */
-    right: 0.5vw; /* Расстояние от правого края */
+    position: absolute; 
+    top: 2.5vh; 
+    right: 0.5vw;
 }
 
 .cart-icon a {
-    text-decoration: none; /* Убираем подчеркивание */
+    text-decoration: none;
 }
 
 .cart-icon a img {
-    transition: filter 0.1s; /* Плавный переход для фильтра */
+    transition: filter 0.1s; 
 }
 
 .cart-icon a:hover img {
-    filter: brightness(0) saturate(100%) invert(1%); /* Пример изменения цвета */
+    filter: brightness(0) saturate(100%) invert(1%); 
 }
 
 .flower-card {
-    position: relative; /* Для абсолютного позиционирования элементов внутри */
+    position: relative; 
 }
 
 .cart-icon {
-    display: inline-block; /* Для правильного отображения */
-    margin-top: 100%; /* Отступ сверху */
+    display: inline-block; 
+    margin-top: 100%; 
 }
 
 .cart-image {
-    width: 2.7vw; /* Ширина изображения корзины */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    transition: filter 0.3s; /* Плавный переход для фильтра */
+    width: 2.7vw; 
+    height: auto; 
+    transition: filter 0.3s; 
 }
 
 .cart-icon:hover .cart-image {
-    filter: brightness(0) saturate(100%) invert(30%); /* Изменение цвета при наведении */
+    filter: brightness(0) saturate(100%) invert(30%);
 }
 
-/* Уведомление */
+
 .notification {
     position: fixed;
     top: 2vh;
     right: 2vh;
-    background-color: #AEC670; /* Зеленый цвет */
+    background-color: #AEC670;
     color: white;
     padding: 1vh;
     border-radius: 5px;
-    display: none; /* Скрыто по умолчанию */
+    display: none;
     z-index: 3;
 }
 
-/* Основные стили для модального окна */
+
 .modal {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed; /* Остается на месте при прокрутке */
-    z-index: 1000; /* Поверх других элементов */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%; /* Полная ширина */
-    height: 100%; /* Полная высота */
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
 }
 
-/* Стили для содержимого модального окна */
+
 .modal-content {
     background-color: #fff;
-    margin: 15% auto; /* Центрирование по вертикали и горизонтали */
+    margin: 15% auto; 
     padding: 1vw;
-    border-radius: 10px; /* Скругленные углы */
-    width: 20vw; /* Ширина модального окна */
+    border-radius: 10px; 
+    width: 20vw;
 }
 
-/* Стили для кнопки закрытия */
+
 .close-button {
-    color: #aaa; /* Цвет текста */
-    float: right; /* Выравнивание вправо */
+    color: #aaa; 
+    float: right; 
     font-size: calc(9px + 16 * (100vw / 1280));
     font-weight: bold;
 }
 
 .close-button:hover,
 .close-button:focus {
-    color: black; /* Цвет при наведении */
+    color: black;
     text-decoration: none;
-    cursor: pointer; /* Указатель при наведении */
+    cursor: pointer;
 }
 
 
 
-/* Стили для полей ввода */
+
 input[type="text"] {
-    width: calc(100% - 20px); /* Полная ширина с учетом отступов */
-    padding: 1vw; /* Отступы внутри поля */
-    margin: 1vh 0; /* Отступы сверху и снизу */
-    border: 0.1vw solid #ccc; /* Граница поля */
-    border-radius: 5px; /* Скругленные углы */
-    box-sizing: border-box; /* Учет отступов и границ в ширине */
+    width: calc(100% - 20px); 
+    padding: 1vw; 
+    margin: 1vh 0;
+    border: 0.1vw solid #ccc;
+    border-radius: 5px; 
 }
 
-/* Стили для кнопки заказа */
 #order-button {
-    background-color: #28a745; /* Зеленый цвет фона */
-    color: white; /* Белый цвет текста */
-    padding: 1vw; /* Отступы внутри кнопки */
-    border: none; /* Без границы */
-    border-radius: 5px; /* Скругленные углы */
-    cursor: pointer; /* Указатель при наведении */
-    width: 100%; /* Полная ширина кнопки */
+    background-color: #28a745; 
+    color: white; 
+    padding: 1vw; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    width: 100%; 
 }
 
 #order-button:hover {
-    background-color: #218838; /* Темно-зеленый цвет при наведении */
+    background-color: #218838; 
 }
 
 
